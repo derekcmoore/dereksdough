@@ -1,3 +1,80 @@
 .logo {
   max-width: 50%;
+  padding: 50px 50px 0 50px;
+}
+
+.link {
+  margin: 10px 0;
+}
+
+.mascot {
+  animation: tumble 1.75s linear infinite;
+  width: 75px;
+  height: 75px;
+  margin: 20px;
+}
+
+.scroll-right {
+  height: 100px;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 20px;
+}
+
+.scroll-right .inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+  /* Starting position */
+  -moz-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  /* Apply animation to this element */
+  -moz-animation: scroll-right 7s linear infinite;
+  -webkit-animation: scroll-right 7s linear infinite;
+  animation: scroll-right 7s linear infinite;
+}
+
+
+@-moz-keyframes scroll-right {
+  0% {
+    -moz-transform: translateX(-100%);
+  }
+  100% {
+    -moz-transform: translateX(100%);
+  }
+}
+@-webkit-keyframes scroll-right {
+  0% {
+    -webkit-transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+  }
+}
+@keyframes scroll-right {
+  0% {
+    -moz-transform: translateX(-100%); /* Browser bug fix */
+    -webkit-transform: translateX(-100%); /* Browser bug fix */
+    transform: translateX(-100%);
+  }
+  100% {
+    -moz-transform: translateX(100%); /* Browser bug fix */
+    -webkit-transform: translateX(100%); /* Browser bug fix */
+    transform: translateX(100%);
+  }
+}
+
+@keyframes tumble {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
