@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./Nav.scss";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 
-import burgerMenu from "../assets/icons/burger-menu.svg";
 import logo from "../assets/logos/full.png";
 import profile from "../assets/icons/profile.svg";
 
@@ -15,38 +14,35 @@ function Nav() {
   return (
     <>
       <div className="nav">
-        <img
-          src={burgerMenu}
-          className="menu-btn"
+        <div
+          id="nav-icon"
+          className={isMenuOpen ? "open" : ""}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-        />
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <div className="logo-wrapper">
           <img src={logo} className="logo" alt="Derek's Dough Logo" />
         </div>
 
         <div className={`items ${isMenuOpen ? "show" : "hide"}`}>
           <div className="item">
-            <a href="#home">
-              Home
-            </a>
+            <a href="#home">Home</a>
           </div>
 
           <div className="item">
-            <a href="#about">
-              About
-            </a>
+            <a href="#about">About</a>
           </div>
 
           <div className="item">
-            <a href="#menu">
-              Menu
-            </a>
+            <a href="#menu">Menu</a>
           </div>
 
           <div className="item">
-            <a href="#contact">
-              Contact
-            </a>
+            <a href="#contact">Contact</a>
           </div>
         </div>
         <a href="#profile" className="item">
