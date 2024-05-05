@@ -26,25 +26,25 @@ function Nav() {
 
         <div className={`items ${isMenuOpen ? "show" : "hide"}`}>
           <div className="item">
-            <a href="#home" className="item">
+            <a href="#home">
               Home
             </a>
           </div>
 
           <div className="item">
-            <a href="#about" className="item">
+            <a href="#about">
               About
             </a>
           </div>
 
           <div className="item">
-            <a href="#menu" className="item">
+            <a href="#menu">
               Menu
             </a>
           </div>
 
           <div className="item">
-            <a href="#contact" className="item">
+            <a href="#contact">
               Contact
             </a>
           </div>
@@ -53,6 +53,7 @@ function Nav() {
           <img src={profile} className="profile" />
         </a>
       </div>
+      {isMenuOpen && <div className="overlay"></div>}
     </>
   );
 }
