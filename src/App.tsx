@@ -1,12 +1,15 @@
-import mascot from "./assets/logos/mascot.svg";
 import Nav from "./components/Nav";
 import "./App.scss";
+
+import mascot from "./assets/logos/mascot.svg";
+import oven from "./assets/icons/oven.svg";
 
 function App() {
   return (
     <>
       <Nav />
       <div className="content">
+        <img src={oven} className="oven" alt="oven" />
         <h1>Website is currently in the oven</h1>
         <div className="card">
           <p>Stay tuned for tasty updates!</p>
