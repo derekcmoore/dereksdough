@@ -1,25 +1,25 @@
 import Nav from "./components/Nav";
 import "./App.scss";
-
-import mascot from "./assets/logos/mascot.svg";
-import oven from "./assets/icons/oven.svg";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Menu from "./pages/Menu";
+import Contact from "./pages/Contact";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
     <>
-      <Nav />
-      <div className="content">
-        <img src={oven} className="oven" alt="oven" />
-        <h1>Website is currently in the oven</h1>
-        <div className="card">
-          <p>Stay tuned for tasty updates!</p>
-        </div>
-        <div className="scroll-right">
-          <div className="inner">
-            <img src={mascot} className="mascot" alt="Derek's Dough Mascot" />
-          </div>
-        </div>
-      </div>
+      <Router>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+      </Router>
     </>
   );
 }

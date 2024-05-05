@@ -30,22 +30,22 @@ function Nav() {
 
         <div className={`items ${isMenuOpen ? "show" : "hide"}`}>
           <div className="item">
-            <a href="#home">Home</a>
+            <a href="/">Home</a>
           </div>
 
           <div className="item">
-            <a href="#about">About</a>
+            <a href="about">About</a>
           </div>
 
           <div className="item">
-            <a href="#menu">Menu</a>
+            <a href="menu">Menu</a>
           </div>
 
           <div className="item">
-            <a href="#contact">Contact</a>
+            <a href="contact">Contact</a>
           </div>
         </div>
-        <a href="#profile" className="item">
+        <a href="profile" className="item">
           <img src={profile} className="profile" />
         </a>
       </div>
