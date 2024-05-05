@@ -1,0 +1,45 @@
+@import "../assets/variables.scss";
+
+.nav {
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  background-color: $accent-color;
+
+  .logo-wrapper {
+    background-color: white;
+    border-radius: 100%;
+    margin: 10px 0 0 10px;
+    width: 140px;
+    height: 140px;
+    .logo {
+      padding: 10px;
+      width: 120px;
+    }
+  }
+
+  .items {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+      margin: 0 30px;
+      font-size: 20px;
+      transition: all 0.3s ease;
+      border-bottom: 3px solid transparent;
+
+      &:hover {
+        color: $secondary-color;
+        border-bottom: 3px solid $secondary-color;
+      }
+    }
+  }
+}

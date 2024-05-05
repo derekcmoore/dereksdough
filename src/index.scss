@@ -3,8 +3,9 @@
 html {
   font-family: "Roboto", sans-serif;
   color: $text-color;
-  background-color: $tertiary-color;
-  max-width: 1080px;
-  margin: 0 auto;
-  text-align: center;
+  background-color: $background-color;
+  
+  body {
+    margin: 0;
+  }
 }
