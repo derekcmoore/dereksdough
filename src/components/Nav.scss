@@ -9,15 +9,49 @@
   justify-content: space-between;
   background-color: $accent-color;
 
+  @media screen and (max-width: $tablet-breakpoint) {
+    justify-content: center;
+  }
+
   .logo-wrapper {
+    z-index: 1000;
     background-color: white;
     border-radius: 100%;
     margin: 10px 0 0 10px;
     width: 140px;
     height: 140px;
+
+    @media screen and (max-width: $tablet-breakpoint) {
+      width: 70px;
+      height: 70px;
+      margin: 5px;
+    }
+
     .logo {
       padding: 10px;
       width: 120px;
+
+      @media screen and (max-width: $tablet-breakpoint) {
+        padding: 2px;
+        width: 66px;
+      }
+    }
+  }
+
+  .menu-btn {
+    display: none;
+    position: absolute;
+    width: 40px;
+    left: 0;
+    margin: 20px;
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(1.2);
+    }
+
+    @media screen and (max-width: $tablet-breakpoint) {
+      display: block;
     }
   }
 
@@ -27,19 +61,73 @@
     margin: auto;
     display: flex;
     align-items: center;
+    transition: height 0.3s linear;
+    @media screen and (max-width: $tablet-breakpoint) {
+      overflow: hidden;
+    }
 
-    a {
-      color: $primary-color;
-      text-decoration: none;
-      margin: 0 30px;
-      font-size: 20px;
-      transition: all 0.3s ease;
-      border-bottom: 3px solid transparent;
+    @media screen and (max-width: $tablet-breakpoint) {
+      position: absolute;
+      top: 80px;
+      left: 0;
+      display: block;
+      width: 100%;
+    }
 
-      &:hover {
-        color: $secondary-color;
-        border-bottom: 3px solid $secondary-color;
+    &.show {
+      height: auto;
+
+      @media screen and (max-width: $tablet-breakpoint) {
+        height: 250px;
       }
+    }
+
+    &.hide {
+      height: auto;
+
+      @media screen and (max-width: $tablet-breakpoint) {
+        height: 0px;
+      }
+    }
+
+    .item {
+      background-color: none;
+
+      @media screen and (max-width: $tablet-breakpoint) {
+        padding: 5px 0 5px 0;
+        background-color: $tertiary-color;
+      }
+
+      a {
+        color: $primary-color;
+        text-decoration: none;
+        margin: 0 30px;
+        font-size: 20px;
+        transition: border 0.3s ease;
+        border-bottom: 3px solid transparent;
+
+        &:hover {
+          color: $secondary-color;
+          border-bottom: 3px solid $secondary-color;
+
+          @media screen and (max-width: $tablet-breakpoint) {
+            border-bottom: 3px solid transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .profile {
+    position: absolute;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    margin: 27px;
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(1.2);
     }
   }
 }
