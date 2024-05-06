@@ -1,12 +1,12 @@
 import mascot from "../assets/logos/mascot.svg";
 import oven from "../assets/icons/oven.svg";
 
-function Menu() {
+function Recipes() {
   return (
     <>
       <div className="content">
         <img src={oven} className="oven" alt="oven" />
-        <h1>Menu is currently in the oven</h1>
+        <h1>Recipes is currently in the oven</h1>
         <div className="card">
           <p>Stay tuned for tasty updates!</p>
         </div>
@@ -20,4 +20,4 @@ function Menu() {
   );
 }
 
-export default Menu;
+export default Recipes;
