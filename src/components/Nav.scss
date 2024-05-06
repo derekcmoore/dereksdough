@@ -16,6 +16,7 @@
     margin: 10px 0 0 10px;
     width: 140px;
     height: 140px;
+    cursor: pointer;
 
     @media screen and (max-width: $tablet-breakpoint) {
       width: 70px;
@@ -57,6 +58,7 @@
     align-items: center;
     transition: height 0.3s linear;
     @media screen and (max-width: $tablet-breakpoint) {
+      background-color: $background-color;
       overflow: hidden;
     }
 
@@ -72,7 +74,7 @@
       height: auto;
 
       @media screen and (max-width: $tablet-breakpoint) {
-        height: 252px;
+        height: 161px;
       }
     }
 
@@ -87,7 +89,22 @@
     .item {
       @media screen and (max-width: $tablet-breakpoint) {
         padding: 8px 0;
-        background-color: $background-color;
+        border-bottom: 1px solid rgba($primary-color, 0.15);
+      }
+
+      &.active {
+        @media screen and (max-width: $tablet-breakpoint) {
+          background-color: rgba($tertiary-color, 0.15);
+        }
+
+        a {
+          color: $secondary-color;
+          border-bottom: 3px solid $secondary-color;
+
+          @media screen and (max-width: $tablet-breakpoint) {
+            border-bottom: 3px solid transparent;
+          }
+        }
       }
 
       a {
