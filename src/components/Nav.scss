@@ -88,7 +88,6 @@
 
     .item {
       @media screen and (max-width: $tablet-breakpoint) {
-        padding: 6px 0;
         border-bottom: 1px solid rgba($primary-color, 0.15);
       }
 
@@ -102,7 +101,7 @@
           border-bottom: 3px solid $secondary-color;
 
           @media screen and (max-width: $tablet-breakpoint) {
-            border-bottom: 3px solid transparent;
+            border-bottom: 0px solid transparent;
           }
         }
       }
@@ -116,8 +115,11 @@
         border-bottom: 3px solid transparent;
 
         @media screen and (max-width: $tablet-breakpoint) {
+          margin: 0;
+          padding: 6px 30px;
           display: block;
           width: 100%;
+          border-bottom: 0px solid transparent;
         }
 
         &:hover {
@@ -125,7 +127,7 @@
           border-bottom: 3px solid $secondary-color;
 
           @media screen and (max-width: $tablet-breakpoint) {
-            border-bottom: 3px solid transparent;
+            border-bottom: 0px solid transparent;
           }
         }
       }
