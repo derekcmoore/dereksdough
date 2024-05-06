@@ -74,7 +74,7 @@
       height: auto;
 
       @media screen and (max-width: $tablet-breakpoint) {
-        height: 161px;
+        height: 157px;
       }
     }
 
@@ -88,7 +88,7 @@
 
     .item {
       @media screen and (max-width: $tablet-breakpoint) {
-        padding: 8px 0;
+        padding: 6px 0;
         border-bottom: 1px solid rgba($primary-color, 0.15);
       }
 
@@ -114,6 +114,11 @@
         font-size: 20px;
         transition: border 0.3s ease;
         border-bottom: 3px solid transparent;
+
+        @media screen and (max-width: $tablet-breakpoint) {
+          display: block;
+          width: 100%;
+        }
 
         &:hover {
           color: $secondary-color;
